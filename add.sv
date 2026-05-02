@@ -1,6 +1,6 @@
-module add (input din_a,
-	    input din_b,
-	    input din_cin,
+module add (input  wire din_a,
+	    input  wire din_b,
+	    input  wire din_cin,
 	    output reg dout_sum,
 	    output reg dout_carry
 	    );
