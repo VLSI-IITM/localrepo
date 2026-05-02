@@ -1,17 +1,20 @@
 module add (
 	    
-	    input  wire clk,
-	    input  wire rst,
-	    input  wire din_a,
-	    input  wire din_b,
-	    input  wire din_cin,
-	    output reg dout_sum,
-	    output reg dout_carry
+	    input  wire  clk,
+	    input  wire  rst,
+	    input  wire  din_a,
+	    input  wire  din_b,
+	    input  wire  din_cin,
+	    output wire  dout_sum,
+	    output wire  dout_carry
 	    );
-       reg dout_sum_reg;
-       reg dout_carry_reg;
+            reg dout_sum_reg;
+            reg dout_carry_reg;
+      
+	      assign dout_sum = dout_sum_reg;
+              assign dout_carry = dout_carry_reg;
 
-	      always@(posedge clk) begin
+ 	      always@(posedge clk) begin
                      if(rst) 
                               {dout_carry,dout_sum} = 2'b00;
                      else 
